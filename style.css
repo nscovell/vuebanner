@@ -1,0 +1,124 @@
+html, body {height:100%;width:100%;margin:0;padding:0}
+.wrap {
+    display:inline-block;
+    height:500px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    background:gray;
+    color:white;
+    text-align:center;
+    transition:all 1s;
+}
+.wrap:selection {
+    background-color:transparent;
+}
+header {
+    background-color:rgba(0, 0, 0, 0.22);
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    z-index:900;
+    width:100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition:all 1s;
+}
+header label {
+    color:lightgray;
+    cursor:pointer;
+    display:inline-block;
+    line-height:3.25em;
+    font-size:.667em;
+    font-weight:bold;
+    padding:1px 10px;
+    transition:all 1s;
+}
+header label:hover {
+    background-color:rgb(112, 112, 112);
+    transition:all 1s;
+}
+.slide {
+    height:105%;
+    width:105%;
+    position:absolute;
+    top:0px;
+    opacity:0;
+    left:0%;
+    z-index:10;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:8em 1em;
+    background-color:gray;
+    background-position: 50% 50%;
+    background-size:cover;
+    transition:left 0s .75s;
+}
+.slide section {
+    font-size:14px;
+    background-color:rgba(0, 0, 0, 0.55);
+    display:inline-block;
+    max-width:900px;
+    text-align:center;
+    padding:15px;
+    border-radius:3px;
+    box-sizing:border-box;
+    cursor:default;
+}
+.slide section h2::selection, span::selection, p::selection  {
+background-color:transparent;
+
+}
+
+.slideA { background-image:url('./backA.jpg')}
+.slideB { background-image:url('./backB.jpg')}
+.slideC { background-image:url('./backC.jpg')}
+.slideD { background-image:url('./backD.jpg')}
+
+[id^="slide"]:checked + .slide {
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:1;
+    z-index:100;
+    transition:all .35s ease-out;
+}
+.moveIn {
+    left:0px;
+    z-index:100;
+    transition:left 0.35s ease-out;
+}
+.slide section {
+    opacity:0;
+    transform: translateY(-20%);
+    transition: transform 2.5s 3.5s, opacity 0.5s;
+}
+[id^="slide"]:checked + .slide section {
+    opacity: 1;
+    transform: translateY(60%);
+    transition: all .5s .5s;
+}
+.box {
+    position:absolute;
+    top:45%;
+    padding:10px 5px;
+    color:white;
+    opacity:.2;
+    box-sizing:border-box;
+    background-color:rgba(255, 255, 255, 0.001);
+    cursor:pointer;
+    font-weight:bold;
+    font-size:45px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index:9999;
+}
+.box:hover {
+    opacity:1;
+    transition:all .5s;
+}
+.box.left {left:10px;}
+.box.right {right:10px;}
+}
+.mySlides {
+    position:absolute;
+    left:0px;
+    display:none;
+}
