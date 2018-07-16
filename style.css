@@ -1,4 +1,15 @@
 html, body {height:100%;width:100%;margin:0;padding:0}
+.menu {
+    background-color:rgba(165, 22, 22, 1.55);
+    height:auto;
+    width:100%;
+    padding:5px 20px;
+    box-sizing:border-box;
+    color:white;
+    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index:900;
+}
 .wrap {
     display:inline-block;
     height:500px;
@@ -38,10 +49,10 @@ header label:hover {
     transition:all 1s;
 }
 .slide {
-    height:105%;
-    width:105%;
+    height:101%;
+    width:101%;
     position:absolute;
-    top:0px;
+    top:0%;
     opacity:0;
     left:0%;
     z-index:10;
@@ -65,7 +76,6 @@ header label:hover {
 }
 .slide section h2::selection, span::selection, p::selection  {
 background-color:transparent;
-
 }
 
 .slideA { background-image:url('./backA.jpg')}
@@ -75,6 +85,7 @@ background-color:transparent;
 
 [id^="slide"]:checked + .slide {
     left:0;
+    top:0px;
     width:100%;
     height:100%;
     opacity:1;
