@@ -3,7 +3,7 @@ banners = [
         myImg:'img/backA.jpg',
         myH: 'banner 1',
         subs: [
-            {title: "This is the first line of the banner and this is going to work and any line can be changed"},
+            {title: `This is the first line of the banner and this is going to work and any line can be changed`},
             {title:'this works'}
         ]
     },
