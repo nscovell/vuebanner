@@ -3,14 +3,15 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src='menu.json'></script>
+<script src='banner.json'></script>
 </head>
-
 <body>
+<div class='menu'>sds
+</div>
 <div class='wrap'>
     <div class='box right'>></div>
     <div class='box left'><</div>
-    <header style='display:none'>
+    <header>
         <label v-for='(m, index) in bnrLst' v-bind:for="('slide-' + index + '-trigger')">{{index + 1}}</label>
     </header>
     <div v-for='(n, index) in bnrLst'>
